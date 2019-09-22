@@ -27,10 +27,10 @@ def  #can handle an empty collection
     my_collect(languages) do |language|
       language.upcase
     end
-    expect(languages).to eq(['ruby', 'javascript', 'python', 'objective-c'])
+    my_collect(languages)=(['ruby', 'javascript', 'python', 'objective-c'])
   end
 
-  it "yields the correct element from the given collection, in this case students" do
+  def yields the correct element from the given collection, in this case students" do
     my_collect(students) do |student|
       expect(student).to_not eq(nil)
     end
