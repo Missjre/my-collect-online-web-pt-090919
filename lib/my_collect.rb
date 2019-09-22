@@ -20,7 +20,7 @@ def  #can handle an empty collection
   def returns a new collection of appropriately modified elements, in this case capitalized languages
      my_collect(languages) do |language|
       language.upcase
-  )+(["RUBY", "JAVASCRIPT", "PYTHON", "OBJECTIVE-C"])
+  (["RUBY", "JAVASCRIPT", "PYTHON", "OBJECTIVE-C"])
   end
 
   it 'does not modify the original collection' do
