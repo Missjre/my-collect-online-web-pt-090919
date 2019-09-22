@@ -30,24 +30,25 @@ def  #can handle an empty collection
     my_collect(languages)=(['ruby', 'javascript', 'python', 'objective-c'])
   end
 
-  def yields the correct element from the given collection, in this case students" do
+  def yields the correct element from the given collection, in this case students
     my_collect(students) do |student|
-      expect(student).to_not eq(nil)
+      my_collect(student)=(nil)
     end
   end
 
-  it "returns a new collection of appropriately modified elements, in this case student first names" do
-    expect(my_collect(students) do |student|
+  def returns a new collection of appropriately modified elements, in this case student first name 
+     my_collect(students) do |student|
       student.split(" ").first
-    end).to eq(["Tim", "Tom", "Sophie", "Antoin"])
+    end
+    my_collect(students)=(["Tim", "Tom", "Sophie", "Antoin"])
   end
 
-  it 'does not modify the original collection' do
+  def does not modify the original collection
     my_collect(students) do |student|
       student.split(" ").first
     end
-    expect(students).to eq(['Tim Jones', 'Tom Smith', 'Sophie Johnson', 'Antoin Miller'])
+    my_collect(students)=(['Tim Jones', 'Tom Smith', 'Sophie Johnson', 'Antoin Miller'])
   end
-end
+
 
 
